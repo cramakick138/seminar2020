@@ -2,11 +2,24 @@
 
 <head>
     <script>
+        function calc(){
+            var a = document.getElementById('win-count').value;
+            a = Number(a);
+            var b = document.getElementById('lose-count').value;
+            b = Number(b);
+
+            var c = a / (a + b);
+            document.getElementById('win-rate').value = c;
+            var d = b / (a + b);
+            document.getElementById('lose-rate').value = d;
+        }
     </script>
 </head>
-
-<body>
-<p>ぷっしゅできない</p>
+    <input id="win-count" type="text">
+    <input id="lose-count" type="text">
+    <button onclick="a()" id="calculate">Calculate</button>
+    <input id="win-rate" type="text">
+    <input id="lose-rate" type="text">
 </body>
 
 </html>
