@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script>
+        function calc(){
+            var a = document.getElementById('win-count').value;
+            a = Number(a);
+            var b = document.getElementById('lose-count').value;
+            b = Number(b);
+
+            var c = a / (a + b);
+            document.getElementById('win-rate').value = c * 100 + "%";
+            var d = b / (a + b);
+            document.getElementById('lose-rate').value = d * 100 + "%";
+        }
+    </script>
+</head>
+<body>
+    <input id="win-count" type="text">
+    <input id="lose-count" type="text">
+    <button onclick="calc()" id="calculate">Calculate</button>
+    <p>勝率は<input id="win-rate" type="text">%です.</p> 
+    <p>敗率は<input id="lose-rate" type="text">%です.</p>
+</body>
+
+</html>
