@@ -1,0 +1,27 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function buttonAPressed() {
+            var html = '';
+            for (var i = 0; i < 10; i++) {
+                var x = Math.floor(Math.random() * 6);
+                html = html + '<li>' + x + '</li>';
+            }
+            document.getElementById('randoms').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>課題11-1</h1>
+    <script src="index.js">
+        var random = Math.random(5) + 1;
+    </script>
+</body>
+<button onclick="buttonAPressed()">乱数生成</button>
+<ul id="randoms">
+</ul>
+
+</html>
