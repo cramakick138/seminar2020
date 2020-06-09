@@ -1,0 +1,28 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function buttonAPressed() {
+            var html = '';
+            var n = document.getElementById("number").value;
+            var n = Number(n);
+            var x = 1;
+            for (var i = 1; i <= n; i++) {
+                x = x * i;
+                html = html + '<li>' + i + "の階乗は" + x + 'です</li>';
+            }
+            document.getElementById('factorials').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>課題11-2</h1>
+    求める回数<input id="number" type="text">
+    <button onclick="buttonAPressed()">計算</button>
+    <ul id='factorials'>
+    </ul>
+</body>
+
+</html>

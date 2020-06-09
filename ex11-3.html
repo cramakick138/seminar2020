@@ -1,0 +1,38 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function buttonAPressed() {
+            var html = '';
+
+            for (var i = 1; i < 21; i++) {
+
+                if (i % 3 == 0 && i % 5 == 0) {
+                    html = html + '<tr><td>' + i + '</td><td>fizz buzz</td></tr>';
+                }
+                else if (i % 3 == 0) {
+                    html = html + '<tr><td>' + i + '</td><td>fizz</td></tr>';
+                }
+                else if (i % 5 == 0) {
+                    html = html + '<tr><td>' + i + '</td><td>buzz</td></tr>';
+                } else {
+                    html = html + '<tr><td>' + i + '</td></tr>';
+                }
+            }
+
+            document.getElementById('frames').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>課題11-3</h1>
+
+    <button onclick="buttonAPressed()">生成</button>
+    <table id="frames">
+    </table>
+
+</body>
+
+</html>

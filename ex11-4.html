@@ -1,0 +1,27 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function buttonAPressed() {
+            var html = '';
+            for (var j = 1; j < 10; j++) {
+                html = html + '<tr></tr>';
+                for (var i = 1; i < 10; i++) {
+                    var x = j * i;
+                    html = html + '<td>' + x + '</td>';
+                }
+            }
+            document.getElementById('multipulcations').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>課題11-4</h1>
+</body>
+<button onclick="buttonAPressed()">計算</button>
+<table id='multipulcations'>
+</table>
+
+</html>
