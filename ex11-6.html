@@ -9,8 +9,8 @@
         function buttonStartPressed() {
             var html = '';
             var r = Math.floor(Math.random() * 20) + 1;
-            // html = html + '<p>' + r + 'です。</p>';
-            document.getElementById('check').innerHTML = html;
+            html = html + r;
+            // document.getElementById('check').innerHTML = html;
             random = r;
         }
 
@@ -18,14 +18,14 @@
             var html = '';
             var ans = document.getElementById("input-number").value;
             var a = Number(ans);
-            // html = html + '<p>' + a + '確認</p>' + random;
+            // html = html + random;
             if (random == a) {
                 html = html + '<p>あたり！</p>';
             }
-            else if (random < a) {
+            else if (random > a) {
                 html = html + '<p>はずれ！ それより大きいです</p>';
             }
-            else if (random > a) {
+            else if (random < a) {
                 html = html + '<p>はずれ！ それより小さいです</p>';
             }
             document.getElementById('output-result').innerHTML = html;
@@ -41,7 +41,7 @@
     <button onclick="buttonAnswerPressed()">回答</button>
     <hr>
     <p id="output-result">数あてゲームを開始するには, Startボタンを押してください</p>
-    <p id="check"></p>
+    <!-- <p id="check"></p> -->
     <script src="index.js"></script>
 </body>
 
