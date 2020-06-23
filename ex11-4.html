@@ -6,7 +6,7 @@
         function buttonAPressed() {
             var html = '';
             for (var j = 1; j < 10; j++) {
-                html = html + '<tr></tr>';
+                html = html + '<tr><td></td></tr>';
                 for (var i = 1; i < 10; i++) {
                     var x = j * i;
                     html = html + '<td>' + x + '</td>';
@@ -19,9 +19,10 @@
 
 <body>
     <h1>課題11-4</h1>
+
+    <button onclick="buttonAPressed()">計算</button>
+    <table id='multipulcations'>
+    </table>
 </body>
-<button onclick="buttonAPressed()">計算</button>
-<table id='multipulcations'>
-</table>
 
 </html>

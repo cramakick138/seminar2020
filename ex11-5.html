@@ -1,0 +1,41 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function buttonAPressed() {
+            var html = '';
+            var base = document.getElementById("input-base").value;
+            var interest = document.getElementById("input-interest").value;
+            var x = Number(base);
+            var y = Number(interest) * 0.01;
+            var z;
+            html = html + '<th>年後</th><th>元利合計</th>';
+            for (var i = 0; i < 10; i++) {
+                x = x * (1 + y);
+                z = Math.ceil(x);
+                html = html + '<tr><td>' + (i + 1) + "</td><td>" + z + '</td></tr>';
+            }
+            document.getElementById('interestcalc').innerHTML = html;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>課題11-5</h1>
+    元金:<input id="input-base" type="text"><br>
+    利率:<input id="input-interest" type="text">
+    <button onclick="buttonAPressed()">計算</button>
+    <hr>
+    <table border="1" id="table1"></table>
+
+    <script src="index.js"></script>
+    <table id='interestcalc' border="1" id="table1">
+        <tr>
+            <th>年後</th>
+            <th>元利合計</th>
+        </tr>
+    </table>
+</body>
+
+</html>
