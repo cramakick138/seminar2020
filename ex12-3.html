@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script>
+        var img01 = new Image();
+        img01.src = 'apple.png';
+        var img02 = new Image();
+        img02.src = 'orange.png';
+
+        function buttonAPressed() {
+            var which = document.getElementById("input-word").value;
+            if (which == 'りんご') {
+                var ctx = document.getElementById('canvas1').getContext('2d');
+                ctx.clearRect(0, 0, 400, 300);
+
+                ctx.drawImage(img01, 10, 10, 100, 100);
+            } else if (which == 'みかん') {
+                var ctx = document.getElementById('canvas1').getContext('2d');
+                ctx.clearRect(0, 0, 400, 300);
+
+                ctx.drawImage(img02, 10, 10, 100, 100);
+            } else {
+                var ctx = document.getElementById('canvas1').getContext('2d');
+                ctx.clearRect(0, 0, 400, 300);
+
+                ctx.font = "30px sans-serif";
+                ctx.fillText("見つからんとですよ！", 20, 75, 200);
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input id="input-word" type="text" value="">
+    <button onclick="buttonAPressed()">検索</button>
+    <hr>
+    <canvas id="canvas1" width="400" height="300" style="border: solid 1px;"></canvas>
+</body>
+
+</html>
